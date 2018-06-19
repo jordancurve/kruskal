@@ -17,7 +17,7 @@ var cardValue = []int{5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 5}
 
 func main() {
         nTrial := int(1e7)
-        nSuccess := parallelSum(nTrial, runtime.NumCPU()-2, countSuccesses)
+        nSuccess := parallelSum(nTrial, runtime.NumCPU(), countSuccesses)
         fmt.Printf("P(win) = %d/%d (%g)\n", nSuccess, nTrial, float64(nSuccess)/float64(nTrial))
 }
 
