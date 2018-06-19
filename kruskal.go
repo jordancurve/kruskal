@@ -6,6 +6,7 @@
 package main
 
 import (
+        "flag"
         "fmt"
         "math/rand"
         "runtime"
@@ -16,9 +17,11 @@ import (
 var cardValue = []int{5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 5}
 
 func main() {
-        nTrial := int(1e7)
+        var nTrial int
+        flag.IntVar(&nTrial, "n", 1e6, "number of trials to run")
+        flag.Parse()
         nSuccess := parallelSum(nTrial, runtime.NumCPU(), countSuccesses)
-        fmt.Printf("P(win) = %d/%d (%g)\n", nSuccess, nTrial, float64(nSuccess)/float64(nTrial))
+        fmt.Printf("P(success) = %d/%d (%g)\n", nSuccess, nTrial, float64(nSuccess)/float64(nTrial))
 }
 
 // countSuccesses runs n trials and return the number of successes.
