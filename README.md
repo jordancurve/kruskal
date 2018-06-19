@@ -6,6 +6,6 @@ How to run:
 
 ```
 go build kruskal.go
-./kruskal -n 100000000
-P(success) = 85462682/100000000 (0.85462682)
+./kruskal -n 1000000000 # This takes about a minute on my machine.
+P(success) = 854659035/1000000000 (0.854659035)
 ```
