@@ -1,6 +1,6 @@
 # Kruskal Count simulator
 
-Monte-Carlo simulator of the [Kruskal Count](https://arxiv.org/pdf/math/0110143.pd) card trick.
+Monte-Carlo simulator of the [Kruskal Count](https://arxiv.org/pdf/math/0110143.pdf) card trick.
 
 How to run:
 
